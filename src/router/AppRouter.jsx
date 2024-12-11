@@ -1,15 +1,14 @@
 import { Route, Routes } from "react-router"
-import { PublicacionPage } from "../postealo/pages/publicacionPage"
-import { ComentarioPage } from "../postealo/pages/comentarioPage"
-import { LoginPage } from "../auth/LoginPage"
+
+import { PostealoRoutes } from "../postealo"
+import { LoginPage } from "../auth"
 
 export const AppRouter = () => {
     return (
         <>
-            <Routes>
-                <Route path="comentario" element={ <ComentarioPage />} />
-                <Route path="publicacion" element={ <PublicacionPage />} />
+            <Routes>                
                 <Route path="login" element={ <LoginPage />} />
+                <Route path="/*" element={ <PostealoRoutes />} />
             </Routes>
         </>
     )
