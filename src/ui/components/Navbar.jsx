@@ -37,6 +37,13 @@ export const Navbar = () => {
                         >
                             Comentarios
                         </NavLink>
+
+                        <NavLink
+                            className={ ({isActive}) => `nav-item nav-link ${ isActive? 'active' : ''}` }
+                            to="/usuario"
+                        >
+                            Usuarios
+                        </NavLink>
                     </div>
                 </div>
 
