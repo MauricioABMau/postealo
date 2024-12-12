@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useFetchMostrarComentario } from "../../hooks/useFetchConsumir";
-import { Link } from "react-router";
 import { Paginacion } from "../../components/paginacion/paginacion";
 
 export const ComentarioPage = () => {
