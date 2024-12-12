@@ -56,24 +56,33 @@ export const SearchPage = () => {
         >
           No hero with <b>{q}</b>
         </div>
-        <div
-          style={{           
-            overflowY: 'auto', 
-            border: '1px solid #ddd', 
-            padding: '10px', 
-            borderRadius: '5px' 
-          }}
-        >
-          <ul>
+       
+        <div className="table-responsive">
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Buscar por titulo</th>
+                <th scope="col">Buscar por comentario</th>
+              </tr>
+            </thead>
+            <tbody>
             {
               publicacionTitulo.map(data => (
-                <li key={data.id}>
-                  {data.title} - titulo <br/>
-                  {data.body} - contenido
-                </li>
+                <tr key={data.id}>
+                  <td>{data.title}</td>
+                  <td>{data.body}</td>
+                  
+                </tr>
               ))
             }
-          </ul>
+              <tr>
+                
+                <td>Contenido Columna 1</td>
+                <td>Contenido Columna 2</td>
+              </tr>
+              
+            </tbody>
+          </table>
         </div>
       </div>
     </>

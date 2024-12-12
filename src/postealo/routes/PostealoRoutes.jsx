@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "../../ui";
 import { Navigate, Route, Routes } from "react-router";
-import { ComentarioPage, InformacionPublicacion, PublicacionPage, SearchPage, UsuarioPage } from "../pages";
+import { ComentarioDetalle, ComentarioPage, InformacionPublicacion, PublicacionDetalle, PublicacionPage, SearchPage, UsuarioPage } from "../pages";
 
 export const PostealoRoutes = () => {
     return (
@@ -10,7 +10,9 @@ export const PostealoRoutes = () => {
             <div className="container">
                 <Routes>
                     <Route path="comentario" element={<ComentarioPage />} />
+                    <Route path="comentarioDetalle/:id" element={<ComentarioDetalle />} />
                     <Route path="publicacion" element={<PublicacionPage />} />
+                    <Route path="publicacionDetalle/:id" element={<PublicacionDetalle />} />
                     <Route path="usuario" element={<UsuarioPage />} />
                     <Route path="busqueda" element={<SearchPage />} />
                     <Route path="informacionPublicacion/:id" element={<InformacionPublicacion />} />

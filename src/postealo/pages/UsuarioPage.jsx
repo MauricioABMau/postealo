@@ -31,24 +31,29 @@ export const UsuarioPage = () => {
   }
 
   return (
-    <div className="row rows-cols-1 row-cols-md-1 g-3">
-      {
-        paginaActualDatos.map((data) => (
-          <div className="col" key={data.id} >
-            <div className="card">
-              <h5 className="card-title">{data.name}</h5>
-              <p className="card-text">{data.username}</p>
-              <p className="card-text"><strong>{data.email}</strong></p>
-              <button className="nav-item nav-link btn" onClick={ () => listaPublicacion(data.id) }> Puclicaciones </button>
+    <>
+      <div className="row rows-cols-1 row-cols-md-2 g-3 mt-5">
+        {
+          paginaActualDatos.map((data) => (
+            <div className="col" key={data.id} >
+              <div className="card">
+                <h5 className="card-title">{data.name}</h5>
+                <p className="card-text">{data.username}</p>
+                <p className="card-text"><strong>{data.email}</strong></p>
+                <button className="btn btn-outline-dark" onClick={() => listaPublicacion(data.id)}> Puclicaciones </button>
+              </div>
             </div>
-          </div>
-        ))
-      }
-      <Paginacion
-        paginaActual={paginaActual}
-        totalPagina={totalPaginas}
-        cambiarPagina={cambiarPagina}
-      />
-    </div>
+          ))
+        }
+      </div>
+      <div>
+        <Paginacion
+          paginaActual={paginaActual}
+          totalPagina={totalPaginas}
+          cambiarPagina={cambiarPagina}
+        />
+
+      </div>
+    </>
   )
 };

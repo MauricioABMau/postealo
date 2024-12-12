@@ -8,7 +8,8 @@ export const InformacionPublicacion = () => {
         return <p>No hay datos disponibles</p>;  // Muestra un mensaje mientras se carga la data
     }
     return (
-        <div className="row rows-cols-1 row-cols-md-1 g-3">
+        <div className="row rows-cols-1 row-cols-md-1 g-3 mt-5">
+            <h1>Publicaciones del usuario</h1>
             {
                 data.filter(item => Number(item.userId) === Number(id)).map((dataPublicacion) => (
                     <div className="col" key={dataPublicacion.id}>
